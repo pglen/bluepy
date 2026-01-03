@@ -122,4 +122,9 @@ integrity beyond the cyphertext operations.
 block length. Make sure you know what you are doing, as it is all too easy
 to encrypt something into oblivion.
 
+Colophon:
+
+ This project is a descendent of the bluepoint encryption algorithm,
+crafted in 'C'.
+
 EOF
