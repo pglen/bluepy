@@ -1,6 +1,10 @@
 # Python Bluepoint Encryption
 ## Full symetric block cypher encryption algorythm
 
+## Installation:
+
+    pip install bluepyenc
+
 ### Quick example:
 
         import bluepyenc
@@ -111,8 +115,8 @@ password.
 
 Warning!
 
-  No meta data is stored. It is left up to the caller to maintain integrity
-beyond the cyphertext operations.
+  No metadata is stored. It is left up to the caller to maintain data
+integrity beyond the cyphertext operations.
 
  The encryption / decryption has to run with the same vector, same pass same
 block length. Make sure you know what you are doing, as it is all too easy
