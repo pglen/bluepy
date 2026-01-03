@@ -54,8 +54,21 @@ are passed. Below, is an extract of utility's printout.
             diehard_opso|   0|   2097152|     100|0.04670626|  PASSED
             diehard_oqso|   0|   2097152|     100|0.06864521|  PASSED
              diehard_dna|   0|   2097152|     100|0.72141254|  PASSED
-     diehard_count_1s_str|   0|    256000|     100|0.68376408|  PASSED
+    diehard_count_1s_str|   0|    256000|     100|0.68376408|  PASSED
 
+## bluefile encryption / decryption utility
+
+This utility can be used as a quick command line encryption utility.
+One of encrypt / decrypt must be specified.
+
+        Usage: bluefile.py [-e] [-d] [options] fromfile tofile
+        Specify -e for encrypt -d decrypt
+        Options:    -p pass   - pass to use
+                    -f        - force overwrite
+                    -v        - Verbose
+                    -V        - Print version
+                    -q        - Quiet
+                    -h        - Help
 TODO;
 
  Started the virtual machine operation, where the encryption is run through
