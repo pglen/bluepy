@@ -14,7 +14,7 @@
 
 PyObject *module;                   // This is us
 
-static  char version[] = "1.1.0";
+static  char version[] = "1.2.0";
 
 static PyObject *_bdate(PyObject *self, PyObject *args, PyObject *kwargs)
 {

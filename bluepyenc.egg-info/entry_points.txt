@@ -1,3 +1,0 @@
-[console_scripts]
-blueencfile = blueencfile:mainfunct
-blueenctest = blueenctest:mainfunct

@@ -89,7 +89,7 @@ are passed. Below, is an extract of the utility's printout.
 This utility can be used as a quick command line encryption / decryption utility.
 One of encrypt / decrypt must be specified.
 
-        Usage: bluefile.py [-e] [-d] [options] fromfile tofile
+        Usage: blueencfile.py [-e] [-d] [options] fromfile tofile
         Specify -e for encrypt -d decrypt
         Options:    -p pass   - pass to use
                     -f        - force overwrite

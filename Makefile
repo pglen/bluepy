@@ -1,24 +1,17 @@
 # ------------------------------------------------------------------------
-# Makefile for the bluepoint python module.
+# Makefile for the bluepoint python encryption module.
 #
 # Sat 03.Jan.2026   Python 2 phased out
+#
 
 all:
 	@echo Targets: build test git clean
 
-#	@echo Targets: build build3 test test3 git clean deb
-
 bdate:
 	python bdate.py >ext/bdate.h
 
-#bluepy2_c.so:  bluepy_c.c bluepoint2.c
-#	@#export APPLY_LP2002043_UBUNTU_CFLAGS_WORKAROUND=""
-#	@python2 buildme.py
-#	@#python2 setup.py build_ext --inplace
-
 bluepy3_c.so: ext/bluepy_c.c  ext/bluepoint2.c
 	@python3 buildme3.py
-	@#python setup.py build_ext --inplace
 
 # Building modules:
 build: bluepy3_c.so
@@ -27,9 +20,10 @@ test: build
 	@echo Diffs should be silent
 	@python3 ./blueencfile.py -e -f -p 1111 Makefile aa
 	@python3 ./blueencfile.py -d -f -p 1111 aa bb
-	@-diff Makefile aa
+	@-diff Makefile bb
 	@rm -f aa bb cc dd ee
 
+# These generate files for the dieharder test
 genfile: build
 	dd  if=/dev/zero of=testfile.bin bs=512 count=10
 	@python3 ./bluefile.py -e -f -p 1111 testfile.bin testfile.enc
