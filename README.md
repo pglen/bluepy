@@ -46,21 +46,23 @@ This is very apparent in the functions ENCRYPT() and DECRYPT().  (see source)
  The cyphertext is tested for randomness with the dieharder suite. All tests
 are passed. Below, is an extract of utility's printout.
 
-   diehard_birthdays|   0|       100|     100|0.07973936|  PASSED
-      diehard_operm5|   0|   1000000|     100|0.22646819|  PASSED
-  diehard_rank_32x32|   0|     40000|     100|0.62699248|  PASSED
-    diehard_rank_6x8|   0|    100000|     100|0.66828243|  PASSED
-   diehard_bitstream|   0|   2097152|     100|0.55151892|  PASSED
-        diehard_opso|   0|   2097152|     100|0.04670626|  PASSED
-        diehard_oqso|   0|   2097152|     100|0.06864521|  PASSED
-         diehard_dna|   0|   2097152|     100|0.72141254|  PASSED
-diehard_count_1s_str|   0|    256000|     100|0.68376408|  PASSED
+       diehard_birthdays|   0|       100|     100|0.07973936|  PASSED
+          diehard_operm5|   0|   1000000|     100|0.22646819|  PASSED
+      diehard_rank_32x32|   0|     40000|     100|0.62699248|  PASSED
+        diehard_rank_6x8|   0|    100000|     100|0.66828243|  PASSED
+       diehard_bitstream|   0|   2097152|     100|0.55151892|  PASSED
+            diehard_opso|   0|   2097152|     100|0.04670626|  PASSED
+            diehard_oqso|   0|   2097152|     100|0.06864521|  PASSED
+             diehard_dna|   0|   2097152|     100|0.72141254|  PASSED
+     diehard_count_1s_str|   0|    256000|     100|0.68376408|  PASSED
 
 TODO;
 
  Started the virtual machine operation, where the encryption is run through
 a virtual machine stack, following a pre-made recipe or getting hints from the
 password.
+
+## History:
 
     release         Thu 13.Oct.2022
     pip install     Sat 03.Jan.2026
