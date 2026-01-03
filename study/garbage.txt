@@ -1,0 +1,11 @@
+def dumpx(ctrx):
+    bb = ""
+    if sys.version_info[0] < 3:
+        for aa in ctrx:
+            bb += "%02x" % ord(aa)
+    else:
+        for aa in ctrx:
+            bb += "%02x" % aa
+    return bb
+
+

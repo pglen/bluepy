@@ -1,0 +1,11 @@
+README.md
+bluefile.py
+bluepoint2.c
+bluepy_c.c
+bluetest.py
+setup.py
+bluepy3.egg-info/PKG-INFO
+bluepy3.egg-info/SOURCES.txt
+bluepy3.egg-info/dependency_links.txt
+bluepy3.egg-info/entry_points.txt
+bluepy3.egg-info/top_level.txt
