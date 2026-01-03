@@ -44,7 +44,7 @@ This is very apparent in the functions ENCRYPT() and DECRYPT().  (see source)
 ## Encryption quality test:
 
  The cyphertext is tested for randomness with the dieharder suite. All tests
-are passed. Below, is an extract of utility's printout.
+are passed. Below, is an extract of the utility's printout.
 
        diehard_birthdays|   0|       100|     100|0.07973936|  PASSED
           diehard_operm5|   0|   1000000|     100|0.22646819|  PASSED
@@ -58,7 +58,7 @@ are passed. Below, is an extract of utility's printout.
 
 ## bluefile encryption / decryption utility
 
-This utility can be used as a quick command line encryption utility.
+This utility can be used as a quick command line encryption / decryption utility.
 One of encrypt / decrypt must be specified.
 
         Usage: bluefile.py [-e] [-d] [options] fromfile tofile
@@ -77,8 +77,9 @@ password.
 
 ## History:
 
-    release         Thu 13.Oct.2022
-    pip install     Sat 03.Jan.2026
+    Release             Thu 13.Oct.2022
+    Pip install         Sat 03.Jan.2026
+    Publish on GH       Sun 04.Jan.2026
 
 Warning!
 
