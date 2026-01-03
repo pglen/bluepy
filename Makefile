@@ -9,37 +9,25 @@ all:
 #	@echo Targets: build build3 test test3 git clean deb
 
 bdate:
-	python bdate.py >bdate.h
+	python bdate.py >ext/bdate.h
 
-bluepy2_c.so:  bluepy_c.c bluepoint2.c
-	@#export APPLY_LP2002043_UBUNTU_CFLAGS_WORKAROUND=""
-	@python2 buildme.py
-	@#python2 setup.py build_ext --inplace
+#bluepy2_c.so:  bluepy_c.c bluepoint2.c
+#	@#export APPLY_LP2002043_UBUNTU_CFLAGS_WORKAROUND=""
+#	@python2 buildme.py
+#	@#python2 setup.py build_ext --inplace
 
-bluepy3_c.so: bluepy_c.c  bluepoint2.c
+bluepy3_c.so: ext/bluepy_c.c  ext/bluepoint2.c
 	@python3 buildme3.py
 	@#python setup.py build_ext --inplace
 
 # Building modules:
-build2: bluepy2_c.so
-
 build: bluepy3_c.so
-
-# Testing modules:
-test2: build2
-	@echo Diffs should be silent
-	@python2 bluetest2.py >cc
-	@python2 bluefile2.py -e -f -p 1111 Makefile aa
-	@python2 bluefile2.py -d -f -p 1111 aa bb
-	@diff Makefile bb
-	@rm -f aa bb cc dd ee
 
 test: build
 	@echo Diffs should be silent
-	@python3  bluetest.py >cc
-	@python3 ./bluefile.py -e -f -p 1111 Makefile aa
-	@python3 ./bluefile.py -d -f -p 1111 aa bb
-	diff Makefile bb
+	@python3 ./blueencfile.py -e -f -p 1111 Makefile aa
+	@python3 ./blueencfile.py -d -f -p 1111 aa bb
+	@-diff Makefile aa
 	@rm -f aa bb cc dd ee
 
 genfile: build

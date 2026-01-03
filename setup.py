@@ -2,8 +2,8 @@ import os, sys
 import setuptools
 
 c_module = setuptools.Extension(
-    'bluepy3',
-    sources=['bluepoint2.c', 'bluepy_c.c'],
+    'bluepyenc',
+    sources=['ext/bluepoint2.c', 'ext/bluepy_c.c',],
     # extra_compile_args=['-Wall', '-pedantic', '-O2'],
     # libraries=['m']
 )
@@ -23,7 +23,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 # Get version number from the main file:
-fp = open("bluepy_c.c", "rt")
+fp = open("ext/bluepy_c.c", "rt")
 vvv = fp.read(); fp.close()
 loc_vers =  '1.0.0'     # Default
 for aa in vvv.split("\n"):
@@ -41,7 +41,7 @@ for aa in vvv.split("\n"):
 #sys.exit(1)
 
 setuptools.setup(
-    name="bluepy3",
+    name="bluepyenc",
     version=loc_vers,
     author="Peter Glen",
     author_email="peterglen99@gmail.com",
@@ -52,7 +52,7 @@ setuptools.setup(
     classifiers=classx,
     include_package_data=True,
     packages=setuptools.find_packages(include=includex),
-    scripts = ['bluetest.py', 'bluefile.py',],
+    scripts = ['blueenctest.py', 'blueencfile.py',],
     ext_modules=[c_module],
     package_dir = { },
     package_data= { },
@@ -62,8 +62,8 @@ setuptools.setup(
     install_requires=deplist,
     entry_points={
         'console_scripts': [
-            "bluetest=bluetest:mainfunct",
-            "bluefile=bluefile:mainfunct",
+            "blueenctest=blueenctest:mainfunct",
+            "blueencfile=blueencfile:mainfunct",
             ],
     },
 )

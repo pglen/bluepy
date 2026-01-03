@@ -2,12 +2,12 @@
 
 import sys, os
 
-import bluepy3
+import bluepyenc
 
 def mainfunct():
     #print( "Python Version:    ", "%d.%d.%d" % sys.version_info[:3])
-    print( "Bluepoint Version: ", bluepy3.version())
-    print( "Builddate:         ",  bluepy3.builddate())
+    print( "Bluepoint Version: ", bluepyenc.version())
+    print( "Builddate:         ",  bluepyenc.builddate())
     #print()
     buff = "Hello, this is a test string.";
     passw = "1234"
@@ -18,16 +18,16 @@ def mainfunct():
         passw = sys.argv[2]
 
     print( "org:", "'" + buff + "'")
-    enc = bluepy3.encrypt( buff, passw)
+    enc = bluepyenc.encrypt( buff, passw)
 
     #print("enz: '" + dumpx(enc) + "'")
-    hexenc = bluepy3.tohex(enc)
+    hexenc = bluepyenc.tohex(enc)
     print("enc:", "'" +  hexenc + "'")
 
-    '''uex = bluepy3.fromhex(hexenc)
+    '''uex = bluepyenc.fromhex(hexenc)
     print("enc: '" + dumpx(uex) + "'")'''
 
-    dec = bluepy3.decrypt(enc, passw)
+    dec = bluepyenc.decrypt(enc, passw)
     if sys.version_info[0] >= 3:
         dec = dec.decode("cp437")
     print("dec:", "'" + dec + "'")
@@ -38,7 +38,7 @@ def mainfunct():
     #print( "hex:   ", hexx)
     #print( "unhex:",  "'" +  uex +"'")
 
-    bluepy3.destroy(enc)
+    bluepyenc.destroy(enc)
     #print( "edd:", "'" + bluepy.tohex(enc) + "'")
 
     err = 0

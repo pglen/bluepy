@@ -1,6 +1,10 @@
+MANIFEST.in
 README.md
+bdate.h
 bluefile.py
+bluemac.h
 bluepoint2.c
+bluepoint2.h
 bluepy_c.c
 bluetest.py
 setup.py

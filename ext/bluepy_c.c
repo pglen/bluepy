@@ -331,7 +331,7 @@ static struct PyModuleDef moduledef = {
 
 #if PY_MAJOR_VERSION >= 3
 PyMODINIT_FUNC
-PyInit_bluepy3(void)
+PyInit_bluepyenc(void)
 #else
 DL_EXPORT(void)
 initbluepy2(void)
