@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+blueencfile.py
+blueenctest.py
+setup.py
+bluepyenc.egg-info/PKG-INFO
+bluepyenc.egg-info/SOURCES.txt
+bluepyenc.egg-info/dependency_links.txt
+bluepyenc.egg-info/entry_points.txt
+bluepyenc.egg-info/top_level.txt
+ext/bdate.h
+ext/bluemac.h
+ext/bluepoint2.c
+ext/bluepoint2.h
+ext/bluepy_c.c
