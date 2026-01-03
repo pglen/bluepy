@@ -606,12 +606,4 @@ char    *bluepoint2_fromhex(char *str, int len, char *out, int *olen)
     return(out);
 }
 
-
-
-
-
-
-
-
-
-
+// EOF
